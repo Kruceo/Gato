@@ -1,3 +1,5 @@
 export const imageProcesses = [
-    'resize'
+    'resize',
+    'rotate',
+    'blur'
 ]

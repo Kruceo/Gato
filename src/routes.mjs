@@ -12,12 +12,16 @@ function getRouter(config) {
     const image = new sharp()
     router.get('*', (req, res) => {
         if (regex.test(req.hostname)) {
-            if (!(/.png$/.test(req.path))) {
-                res.send('nothing here\n' + req.path)
+            let p = path.resolve(path.join('./public', req.path))
+            if(!fs.existsSync(p)){
+                res.statusCode = 404
+                res.end()
+                return;
+            }
+            if (!(/.png$|.jpeg$|.jpg$|.webm$/.test(req.path))) {
+                res.sendFile(p)
                 return
             }
-            let p = path.resolve(path.join('./public', req.path))
-
             if (req.query == {}) { // send original file
                 res.sendFile(p)
                 return;
@@ -39,10 +43,13 @@ function getRouter(config) {
                 const [w, h] = req.query.resize.split(',').map(each => parseInt(each))
                 out_img = out_img.resize(w, h)
             }
-            console.log(req.query)
+         
             if (req.query.rotate) {
+                out_img = out_img.rotate(parseInt(req.query.rotate))
+            }
 
-                out_img = out_img.rotate(req.query.rotate)
+            if (req.query.blur) {
+                out_img = out_img.blur(parseInt(req.query.blur))
             }
 
             out_img.toFile(o).then(() => {

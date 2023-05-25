@@ -1,5 +1,5 @@
 {
     "accept": ".*",
     "port": 8080,
-    "disableCache":true
+    "disableCache":false
 }
