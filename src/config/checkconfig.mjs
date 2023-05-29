@@ -8,7 +8,7 @@ export default function checkConfig() {
     }
     else {
         config = {
-            acceptFrom:[],
+            acceptHost:[],
             port:8080
         }
 

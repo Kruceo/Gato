@@ -13,12 +13,13 @@ export default function createQueryBasedName(query, end) {
             return 0
         })
         .reduce((acum, next) => {
-            if(!imageProcesses.includes(next[0])) {
+            const index = imageProcesses.indexOf(next[0])
+            if(index == -1) {
                 console.log('imageProcesses not includes ' + next[0])
                 return acum;
             }
-            return acum + next[0] + next[1].replaceAll(',', 'x') + '_'
+            return acum + index + next[1].replaceAll(',', 'x') + '.'
         }, '')
-    const build = start + end.replaceAll('/', '_')
+    const build = start + end.replaceAll('/', '.')
     return build
 }

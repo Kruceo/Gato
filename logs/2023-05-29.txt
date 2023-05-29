@@ -1,0 +1,78 @@
+[DON] 2023-05-29,14:36:48.311 # server running on 10022
+[DON] 2023-05-29,14:36:53.479 # Server running on 10022
+[DON] 2023-05-29,14:37:06.480 # Server running. Port: 10022
+[DON] 2023-05-29,14:37:08.769 # Server running. Port:10022
+[DON] 2023-05-29,14:37:10.205 # Server running. Port: 10022
+[DON] 2023-05-29,14:37:52.886 # Server running. Port: 10022
+[DON] 2023-05-29,14:38:16.645 # Server running. Port: 10022
+[INF] 2023-05-29,14:38:20.964 # localhost
+[DON] 2023-05-29,14:39:36.160 # Server running. Port: 10022
+[INF] 2023-05-29,14:39:41.651 # ::1
+[INF] 2023-05-29,14:39:42.816 # ::1
+[DON] 2023-05-29,14:40:03.923 # Server running. Port: 10022
+[DON] 2023-05-29,14:40:56.901 # Server running. Port: 10022
+[INF] 2023-05-29,14:40:59.566 # ::ffff:192.168.20.197
+[DON] 2023-05-29,14:41:55.989 # Server running. Port: 10022
+[INF] 2023-05-29,14:42:00.031 # 7,9,1,.,0,2,.,8,6,1,.,2,9,1,:,f,f,f,f,:,:
+[DON] 2023-05-29,14:42:16.584 # Server running. Port: 10022
+[DON] 2023-05-29,14:42:24.306 # Server running. Port: 10022
+[INF] 2023-05-29,14:42:26.526 # ::ffff:192.168.20.197
+[DON] 2023-05-29,14:44:15.549 # Server running. Port: 10022
+[INF] 2023-05-29,14:44:24.293 # false
+[DON] 2023-05-29,14:44:24.297 # Server running. Port: 10022
+[INF] 2023-05-29,14:44:27.016 # false
+[DON] 2023-05-29,14:44:27.021 # Server running. Port: 10022
+[INF] 2023-05-29,14:44:46.860 # false
+[DON] 2023-05-29,14:44:46.864 # Server running. Port: 10022
+[INF] 2023-05-29,14:44:48.836 # false
+[DON] 2023-05-29,14:44:48.839 # Server running. Port: 10022
+[INF] 2023-05-29,14:45:24.672 # false
+[DON] 2023-05-29,14:45:24.676 # Server running. Port: 10022
+[INF] 2023-05-29,14:45:26.070 # false
+[DON] 2023-05-29,14:45:26.074 # Server running. Port: 10022
+[INF] 2023-05-29,14:47:33.765 # false
+[DON] 2023-05-29,14:47:33.769 # Server running. Port: 10022
+[INF] 2023-05-29,14:48:43.572 # false
+[DON] 2023-05-29,14:48:43.577 # Server running. Port: 10022
+[INF] 2023-05-29,14:48:54.012 # true
+[DON] 2023-05-29,14:48:54.017 # Server running. Port: 10022
+[DON] 2023-05-29,14:49:22.908 # Server running. Port: 10022
+[DON] 2023-05-29,14:49:54.525 # Server running. Port: 10022
+[INF] 2023-05-29,14:49:58.304 # ::ffff:192.168.20.197trying to access /graphiccard.png
+[DON] 2023-05-29,14:50:09.398 # Server running. Port: 10022
+[INF] 2023-05-29,14:50:12.481 # ::ffff:192.168.20.197 trying to access /graphiccard.png
+[DON] 2023-05-29,14:51:44.688 # Server running. Port: 10022
+[DON] 2023-05-29,14:51:50.855 # Server running. Port: 10022
+[INF] 2023-05-29,14:51:55.036 # ::ffff:192.168.20.197 trying to access /graphiccard.png
+[DON] 2023-05-29,14:52:24.939 # Server running. Port: 10022
+[INF] 2023-05-29,14:52:26.832 # ::ffff:192.168.20.197 trying to access /graphiccard.png
+[INF] 2023-05-29,14:52:26.837 # ::ffff:192.168.20.197 refused
+[INF] 2023-05-29,14:52:33.494 # ::ffff:192.168.20.197 trying to access /graphiccard.png
+[INF] 2023-05-29,14:52:33.495 # ::ffff:192.168.20.197 refused
+[INF] 2023-05-29,14:52:38.205 # ::ffff:192.168.20.197 trying to access /graphiccard.png
+[INF] 2023-05-29,14:52:38.206 # ::ffff:192.168.20.197 refused
+[INF] 2023-05-29,17:24:48.283 # ::ffff:192.168.20.197 trying to access /graphiccard.png
+[INF] 2023-05-29,17:24:48.295 # ::ffff:192.168.20.197 refused
+[DON] 2023-05-29,17:25:01.586 # Server running. Port: 10022
+[DON] 2023-05-29,17:25:12.096 # Server running. Port: 10022
+[INF] 2023-05-29,17:25:27.394 # ::ffff:192.168.20.197 Trying to access /graphiccard.png
+[INF] 2023-05-29,17:25:27.398 # ::ffff:192.168.20.197 Refused
+[DON] 2023-05-29,17:26:16.989 # Server running. Port: 10022
+[INF] 2023-05-29,17:26:19.999 # ::ffff:192.168.20.197 Trying to access /graphiccard.png
+[INF] 2023-05-29,17:26:20.003 # ::ffff:192.168.20.197 Access denied
+[INF] 2023-05-29,17:28:32.196 # ::ffff:192.168.20.197 Trying to access /graphiccard.png
+[INF] 2023-05-29,17:28:32.199 # ::ffff:192.168.20.197 Access denied
+[INF] 2023-05-29,17:29:13.686 # ::ffff:192.168.20.197 Trying to access /graphiccard.png
+[INF] 2023-05-29,17:29:13.690 # ::ffff:192.168.20.197 Access denied
+[INF] 2023-05-29,17:29:14.442 # ::ffff:192.168.20.197 Trying to access /graphiccard.png
+[INF] 2023-05-29,17:29:14.446 # ::ffff:192.168.20.197 Access denied
+[INF] 2023-05-29,17:29:14.846 # ::ffff:192.168.20.197 Trying to access /graphiccard.png
+[INF] 2023-05-29,17:29:14.848 # ::ffff:192.168.20.197 Access denied
+[INF] 2023-05-29,17:29:16.126 # ::ffff:192.168.20.197 Trying to access /graphiccard.png
+[INF] 2023-05-29,17:29:16.131 # ::ffff:192.168.20.197 Access denied
+[INF] 2023-05-29,17:29:16.856 # ::ffff:192.168.20.197 Trying to access /graphiccard.png
+[INF] 2023-05-29,17:29:16.856 # ::ffff:192.168.20.197 Access denied
+[INF] 2023-05-29,17:29:17.596 # ::ffff:192.168.20.197 Trying to access /graphiccard.png
+[INF] 2023-05-29,17:29:17.598 # ::ffff:192.168.20.197 Access denied
+[INF] 2023-05-29,17:29:18.692 # ::ffff:192.168.20.197 Trying to access /graphiccard.png
+[INF] 2023-05-29,17:29:18.695 # ::ffff:192.168.20.197 Access denied

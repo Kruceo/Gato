@@ -3,19 +3,21 @@ import path from "path";
 import sharp from "sharp";
 import fs from 'fs'
 import createQueryBasedName from "./utils/createQueryBasedName.mjs";
+import { logger } from "../index.mjs";
 function getRouter(config) {
     /**
      * @type {Express}
      */
     const router = new Router()
-    const regex = new RegExp(config.accept ?? '.*')
-    const image = new sharp()
+    const regex = new RegExp(config.acceptHost ?? '.*')
     router.get('*', (req, res) => {
+        logger.info(req.ip + ' Trying to access ' + req.path);
         if (regex.test(req.hostname)) {
             let p = path.resolve(path.join('./public', req.path))
-            if(!fs.existsSync(p)){
+            if (!fs.existsSync(p)) {
                 res.statusCode = 404
                 res.end()
+                logger.info(req.path + ' not exists');
                 return;
             }
             if (!(/.png$|.jpeg$|.jpg$|.webm$/.test(req.path))) {
@@ -43,13 +45,18 @@ function getRouter(config) {
                 const [w, h] = req.query.resize.split(',').map(each => parseInt(each))
                 out_img = out_img.resize(w, h)
             }
-         
+
             if (req.query.rotate) {
                 out_img = out_img.rotate(parseInt(req.query.rotate))
             }
 
             if (req.query.blur) {
                 out_img = out_img.blur(parseInt(req.query.blur))
+            }
+            if (req.query.tint) {
+                const [r, g, b] = req.query.tint.split(',').map(each => parseInt(each))
+                const color = { r, g, b }
+               out_img = out_img.tint(color)
             }
 
             out_img.toFile(o).then(() => {
@@ -61,6 +68,7 @@ function getRouter(config) {
         else {
             res.statusCode = 404
             res.end()
+            logger.info(req.ip + ' Access denied');
         }
     })
     return router

@@ -1,5 +1,5 @@
 {
-    "accept": ".*",
-    "port": 8080,
+    "acceptHost": "^(.*.)?kruceo.com$|localhost|192.168.0.197",
+    "port": 10022,
     "disableCache":false
 }

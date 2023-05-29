@@ -1,7 +1,7 @@
 {
-  "name": "cdnserver",
-  "version": "0.0.0",
-  "description": "A CDN files server that auto pull from github",
+  "name": "gato",
+  "version": "0.4.0",
+  "description": "Photo-focused archiving server, includes features such as endpoint image editing and caching",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "ffmpeg": "^0.0.4",
+    "madeira": "github:kruceo/madeira",
     "sharp": "^0.32.1"
   }
 }
