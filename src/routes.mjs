@@ -11,9 +11,14 @@ function getRouter(config) {
     const router = new Router()
     const regex = new RegExp(config.acceptHost ?? '.*')
     router.get('*', (req, res) => {
-        logger.info(req.ip + ' Trying to access ' + req.path);
+        logger.info(`${req.ip} Trying to access ${req.path}`);
         if (regex.test(req.hostname)) {
-            let p = path.resolve(path.join('./public', req.path))
+            let pr = req.path
+           
+            if (pr.startsWith("/")) pr = pr.slice(1)
+
+            let p = path.resolve('./public', pr)
+
             if (!fs.existsSync(p)) {
                 res.statusCode = 404
                 res.end()
@@ -29,13 +34,16 @@ function getRouter(config) {
                 return;
             }
 
-            const qname = createQueryBasedName(req.query, req.path)
-            let o = path.resolve(path.join('./cache', qname))
+            const qname = createQueryBasedName(req.query, pr)
+            
+            let o = path.resolve('./cache', qname)
 
             if (!config.disableCache) {
                 if (fs.existsSync(o)) {   //send cached file if queryfilled file exist in hard cache
+                    logger.info(`using cache (${qname})`)
                     res.sendFile(o)
                     return;
+                    //------------------------------POSSIBLE END HERE--------------------------------------------------
                 }
             }
 
@@ -56,7 +64,7 @@ function getRouter(config) {
             if (req.query.tint) {
                 const [r, g, b] = req.query.tint.split(',').map(each => parseInt(each))
                 const color = { r, g, b }
-               out_img = out_img.tint(color)
+                out_img = out_img.tint(color)
             }
 
             out_img.toFile(o).then(() => {

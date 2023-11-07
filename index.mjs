@@ -1,6 +1,4 @@
 import express from 'express'
-import cp from 'child_process'
-import fs from 'fs'
 import checkConfig from './src/config/checkconfig.mjs'
 import { getRouter } from './src/routes.mjs'
 import { checkDirs } from './src/utils/checkPaths.mjs'

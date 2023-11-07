@@ -1,6 +1,7 @@
 import { imageProcesses } from "../config/types.mjs";
 
 export default function createQueryBasedName(query, end) {
+    let path = end;
     if (query == {}) return end;
     const start = Object.entries(query)
         .sort((a, b) => {
@@ -18,8 +19,8 @@ export default function createQueryBasedName(query, end) {
                 console.log('imageProcesses not includes ' + next[0])
                 return acum;
             }
-            return acum + index + next[1].replaceAll(',', 'x') + '.'
+            return `${acum}${index}.${next[1].replaceAll(',', 'x')}.`
         }, '')
-    const build = start + end.replaceAll('/', '.')
+    const build = start + end.replaceAll("/",'.')
     return build
 }
